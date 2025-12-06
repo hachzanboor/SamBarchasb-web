@@ -1,0 +1,39 @@
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #3333cc;
+}
+
+.list-container {
+  display: flex;
+  justify-content: center; /* کل لیست وسط صفحه */
+  margin-top: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 20px; /* دو ستون: متن | مربع */
+  grid-column-gap: 10px;            /* فاصله بین متن و مربع */
+}
+
+li {
+  display: contents; /* آیتم‌ها را به grid بدهد */
+}
+
+li::after {
+  content: "■";
+  color: #3333cc;
+  justify-self: start; /* مربع در ستون خودش ثابت بماند */
+}
+
+ul li {
+  text-align: right;  /* متن راست چین */
+}
