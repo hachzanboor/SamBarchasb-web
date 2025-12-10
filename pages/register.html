@@ -2,13 +2,35 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <title>ثبت نام</title>
+    <title>ثبت‌نام</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">خانه</a></li>
+            <li><a href="login.html">ورود</a></li>
+            <li><a href="register.html">ثبت‌نام</a></li>
+            <li><a href="dashboard.html">داشبورد</a></li>
+        </ul>
+    </nav>
 
-<h1>این صفحه در حال توسعه است</h1>
+    <div class="form-container">
+        <h2>ثبت‌نام</h2>
+        <form>
+            <label for="fullname">نام و نام خانوادگی:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="نام کامل" required>
 
-<script src="../js/main.js"></script>
+            <label for="email">ایمیل:</label>
+            <input type="email" id="email" name="email" placeholder="ایمیل" required>
+
+            <label for="password">رمز عبور:</label>
+            <input type="password" id="password" name="password" placeholder="رمز عبور" required>
+
+            <button type="submit">ثبت‌نام</button>
+        </form>
+    </div>
 </body>
 </html>
+
