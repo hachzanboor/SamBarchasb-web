@@ -23,10 +23,81 @@
     </nav>
 
     <div class="dashboard-container">
+
         <h1>به داشبورد خوش آمدید</h1>
+        <h2 id="userEmail"></h2>
+        <p id="userRole"></p>
         <p>اینجا بعداً اطلاعات کاربر و سفارش‌ها نمایش داده می‌شود.</p>
         <a href="../index.html"><button>خروج</button></a>
     </div>
+
+    <div id="adminPanel">
+    <h3>سفارش‌های ثبت شده</h3>
+<table border="1">
+  <thead>
+    <tr>
+      <th>طول</th>
+      <th>ارتفاع</th>
+      <th>متریال</th>
+      <th>تیراژ</th>
+      <th>قیمت تقریبی</th>
+    </tr>
+  </thead>
+  <tbody id="ordersTable"></tbody>
+</table>
+
+
+    </div>
+
+    <div id="customerPanel">
+    <h2>ثبت سفارش لیبل</h2>
+
+<form id="orderForm">
+  <label>طول لیبل (میلی‌متر)</label>
+  <input type="number" id="length" required>
+
+  <label>ارتفاع لیبل (میلی‌متر)</label>
+  <input type="number" id="height" required>
+
+  <label>تیراژ مورد نظر</label>
+  <input type="number" id="quantity" required>
+
+  <label>نوع متریال</label>
+  <select id="material">
+    <option value="glossy">گلاسه</option>
+    <option value="metalized">متالایز</option>
+    <option value="transparent">شفاف</option>
+  </select>
+
+  <label>
+    <input type="checkbox" id="lamination">
+    سلفون (مات یا براق)
+  </label>
+
+  <label>
+    <input type="checkbox" id="uv">
+    یووی
+  </label>
+
+  <label>
+    <input type="checkbox" id="gold">
+    طلاکوب / نقره‌کوب
+  </label>
+
+  <label>
+    <input type="checkbox" id="hasDie">
+    کلیشه و قالب موجود است
+  </label>
+
+  <button type="submit">محاسبه قیمت</button>
+</form>
+
+<p id="orderResult"></p>
+
+    </div>
+    
+<script type="module" src="../js/dashboard.js"></script>
+
 
 </body>
 </html>
